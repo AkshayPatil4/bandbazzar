@@ -1,0 +1,51 @@
+#dropdown-basic-button{
+    border-radius: 0%;
+    border: none;
+    background-color: white!important;
+    color: black;
+    box-shadow: none;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 1%;
+    text-transform: none;
+    letter-spacing: 2px;
+    padding-top: 3px;
+}
+.btn-primary.dropdown-toggle{
+    width: 100%;
+    padding-top: 1%;
+    background-color: white!important;
+}
+.Navbar{
+    margin-top: 0%;
+}
+.nav-item{
+    padding: 1.5%;
+}
+.search{
+    border-radius: 50%;
+    background-color: black;
+    font-size: 15px;
+    font-weight: 100;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+}
+.fa-search{
+    padding-top: 5px;
+    color: white;
+}
+.fa .fas{
+    font-weight: 400;
+}
+.banner-fluid{
+    position: relative;
+}
+
+.controls {
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    top: 50%;
+}

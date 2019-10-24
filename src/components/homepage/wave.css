@@ -1,0 +1,58 @@
+section {
+    width: 100%;
+}
+
+section .wave {
+    width: 100%;
+    background: url(../../assets/108.png);
+    height: 221px;
+    animation: animate 30s linear infinite;
+}
+
+@keyframes animate
+{
+    0%
+    {
+        background-position: -200px;
+    }
+    10%
+    {
+        background-position: -300px;
+    }
+    20%
+    {
+        background-position: -400px;
+    }
+    30%
+    {
+        background-position: -500px;
+    }
+    40%
+    {
+        background-position: -600px;
+    }
+    50%
+    {
+        background-position: -700px;
+    }
+    60%
+    {
+        background-position: -600px;
+    }
+    70%
+    {
+        background-position: -500px;
+    }
+    80%
+    {
+        background-position: -400px;
+    }
+    90%
+    {
+        background-position: -300px;
+    }
+    100%
+    {
+        background-position: -200px;
+    }
+}

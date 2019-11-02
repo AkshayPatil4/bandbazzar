@@ -7,13 +7,15 @@ import Crew from './Crew';
 import Trst from './Trst';
 import Artist from './Artist';
 import Cart from './Cart';
+import Footer from './Footer';
 import Studio from './Studio';
+
 import './Home.css';
 
 function Home() {
     return(
         <div className="Home">
-            <div className="navigation">
+           <div className="navigation">
                             <NavHome /></div>
 
             <hr />
@@ -31,6 +33,8 @@ function Home() {
             <Crew />
             <hr />
             <Cart />
+            <hr />
+            <Footer />
         </div>
     );
 }

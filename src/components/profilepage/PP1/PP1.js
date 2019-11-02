@@ -16,6 +16,8 @@ import About from './About';
 import Band from './Band';
 import Available from './Available';
 import Navigationbar from './Navigationbar';
+import NavHome from '../../homepage/NavHome';
+import '../../homepage/Home.css';
 
 const borderStyle = {
     border: '1px solid #eee'
@@ -24,7 +26,8 @@ const borderStyle = {
 function PP1(){
     return(
       <div className="ProfilePage1">
-        <Navigationbar />
+        <div className="navigation">
+        <NavHome /></div>
         <Info />
         <div className="border" style={borderStyle}>
           <About />

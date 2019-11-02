@@ -6,13 +6,16 @@ import PP1 from './components/profilepage/PP1/PP1';
 import FP1 from './components/filterpage/FP1/FP1';
 import Login from './components/Login/login';
 import Fan from './components/Login/fan';
+import View from './components/Event/view';
 import Sartist from './components/Login/Sartist';
+import NavHome from './components/homepage/NavHome';
 class App extends Component {
   componentDidMount() {
     // Jquery here $(...)...
   }
   render() {
     return (
+     
       <Router>
         <div className="App">
           <Route exact path="/" render={props => (
@@ -25,7 +28,7 @@ class App extends Component {
           <Route path='/login' component={Login} />
           <Route path='/Fan' component={Fan} />
           <Route path='/Sartist' component={Sartist} />  
-
+          <Route path='/View' component={View} />  
       </div>
       </Router>
     );

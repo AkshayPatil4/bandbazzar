@@ -88,7 +88,7 @@ export default function NavHome() {
                 </Nav.Item>
                 <Nav.Item>
                     <Nav.Link>
-                    <Link to="/Event"><b>Post Event</b></Link>
+                    <Link to="/view"><b>Post Event</b></Link>
                     </Nav.Link>
                 </Nav.Item>
     </Nav>

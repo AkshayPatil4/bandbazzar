@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { Link } from "react-router-dom";
 import { Nav, Navbar, NavDropdown } from "react-bootstrap";
 import styled from "styled-components";
@@ -63,7 +63,7 @@ export default function NavHome() {
 
                         <Nav.Item>
                             <Nav.Link>
-                            <Link to="/Gigs"><b>Gigs</b></Link>
+                            <Link to="/gmain"><b>Gigs</b></Link>
                             </Nav.Link>
                         </Nav.Item>
 
@@ -88,7 +88,7 @@ export default function NavHome() {
                 </Nav.Item>
                 <Nav.Item>
                     <Nav.Link>
-                    <Link to="/view"><b>Post Event</b></Link>
+                    <Link to="/main"><b>Post Event</b></Link>
                     </Nav.Link>
                 </Nav.Item>
     </Nav>

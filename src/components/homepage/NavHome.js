@@ -24,7 +24,7 @@ export default function NavHome() {
     return (
         
           
-<div className="container-fluid mt-auto">
+<div className="container-fluid navh ">
 
             <Navbar collapseOnSelect expand="lg" >
   <Navbar.Brand href="#home">  

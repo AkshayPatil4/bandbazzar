@@ -10,7 +10,7 @@ import Cart from './Cart';
 import Footer from './Footer';
 import Studio from './Studio';
 
-import './Home.css';
+import style from './Home.css';
 
 function Home() {
     return(

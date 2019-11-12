@@ -1,8 +1,9 @@
 import React from 'react';
-import Card from './Card';
+
 import Filter from './Filter';
 import NavHome from '../../homepage/NavHome';
 import '../../homepage/Home.css';
+import Card from './Card';
 
 const filterStyle = {
     margin: '0',

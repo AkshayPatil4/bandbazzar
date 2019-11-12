@@ -89,7 +89,7 @@ function Footers(){
                             <a href ='#'>Jobs</a> <b> - </b> <a href="#">Developers</a> <b> - </b> <a href="#">Help</a> <b> - </b> <a href="#">Legal</a> <b> - </b> <a href="#">Privacy</a> <b> - </b> 
                             <a href ="#">Cookies</a> <b> - </b> <a href="#">Imprint</a> <b> - </b> <a href="#">Charts</a>
                             <br />
-                            <p style={{textAlign:'left'}}>Language: English(US)</p>
+                            <p style={{textAlign:'center'}}>&copy; {new Date().getFullYear()} Copyright: <a href="#"> Bandbazaar.com </a></p>
                         </div>
                     </div>
                 </div>

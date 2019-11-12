@@ -9,6 +9,7 @@ import{  Container,
     Button,
     CardDeck,
 Nav,} from 'react-bootstrap';
+import style from './rightdn.css';
 
  function downbody(){
     return(
@@ -30,8 +31,11 @@ Nav,} from 'react-bootstrap';
           </Nav>
         </Card.Header>
         <Nav.Link>
-     <div className="row">
+    
+       
        <Card>
+       <div className="row">
+       <div className="col">
     <Card.Img variant="top" src={require('../../assets/Coldplay.jpeg')} style={{width: '150px',height: '130px'}} />
     <Card.Body>
       <Card.Title>Address</Card.Title>
@@ -40,12 +44,16 @@ Nav,} from 'react-bootstrap';
 Near Hi-tech City, PO Bag 1101, Hyderabad, India
       </Card.Text>
     </Card.Body>
-    
-  </Card>
-  <Card>
-
-  </Card>
+    </div>
+    <div className="col">
+<btnstyle>
+    <button className="btn btn-md apply"  type="submit">Tickets </button>
+    </btnstyle>
   </div>
+  </div>
+  </Card>
+
+  
       
        </Nav.Link>
       </Card>

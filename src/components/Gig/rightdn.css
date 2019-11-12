@@ -1,0 +1,16 @@
+.apply{
+    background-color:#000;
+    color:white;
+    width:40%;
+    padding:1.5%;
+    font-size:0.86em;
+    letter-spacing:1px;
+    border: 1.1px solid #000000;
+    
+}
+
+.apply:hover:hover {
+    text-decoration:none;  
+    color: #000;
+    background-color:white;
+}

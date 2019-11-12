@@ -34,7 +34,7 @@ export default function Bod(){
                 aria-describedby="basic-addon2"
               />
               <InputGroup.Append>
-                <Button variant="outline-secondary">Change</Button>
+               <div className="btn">change</div>
               </InputGroup.Append>
             </InputGroup></Col>
                     </Row>

@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Footer from '../../homepage/Footer';
 import Filter from './Filter';
 import NavHome from '../../homepage/NavHome';
 import '../../homepage/Home.css';
@@ -32,6 +32,7 @@ function FP1() {
                 <Card />
             </div>
             </div>
+            <Footer />
         </div>
     );
 }

@@ -9,6 +9,7 @@ import {
     FormControl,
     Button,
 } from 'react-bootstrap';
+import style from './rightup.css';
 export default function Bod(){
         return(
             <Container>
@@ -34,7 +35,9 @@ export default function Bod(){
                 aria-describedby="basic-addon2"
               />
               <InputGroup.Append>
-               <div className="btn">change</div>
+              <btnstyle>
+    <button className="btn change mr-auto"  type="submit">Change </button>
+    </btnstyle>
               </InputGroup.Append>
             </InputGroup></Col>
                     </Row>

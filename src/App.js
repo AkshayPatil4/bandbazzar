@@ -25,6 +25,7 @@ class App extends Component {
             </React.Fragment>
           )} />
           <Route path="/pp1" component={PP1} />
+          <Route path="/Home" component={Home} />
           <Route path="/fp1" component={FP1} />
           <Route path='/login' component={Login} />
           <Route path='/Fan' component={Fan} />

@@ -36,18 +36,14 @@ export default function NavHome() {
     <Nav className="mr-auto" >
     <Nav.Item>
                             <Nav.Link>
-                                <Link to="/"><b>Home</b></Link>
+                                <Link to="/Home"><b>Home</b></Link>
                             </Nav.Link>
                         </Nav.Item>
 
                         <Nav.Item>
-                        <NavDropdown title="Band" id="basic-nav-dropdown">
-        <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-        <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-        <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-        <NavDropdown.Divider />
-        <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-      </NavDropdown>
+                        <Nav.Link>
+                                <Link to="/FP1"><b>Band</b></Link>
+                            </Nav.Link>
                         </Nav.Item>
 
                         <Nav.Item>

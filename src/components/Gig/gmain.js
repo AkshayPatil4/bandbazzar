@@ -2,10 +2,13 @@ import React from 'react';
 import Rightupbody from './rightupbody';
 import Rightdnbody from './rightdnbody';
 
-
+import Footer from '../homepage/Footer';
 import '../homepage/Home.css';
-import Filter from '../filterpage/FP1/Filter';
+import Filter from './Filter';
 import NavHome from '../homepage/NavHome';
+import {
+    Breadcrumb
+} from 'react-bootstrap';
 
 
 const filterStyle = {
@@ -32,10 +35,18 @@ function gigs() {
                 <Filter />
             </div>
             <div className="col-md-9" style={searchStyle}>
+            <Breadcrumb>
+  <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
+  <Breadcrumb.Item href="/main">
+    Event
+  </Breadcrumb.Item>
+  <Breadcrumb.Item active>PostEvent</Breadcrumb.Item>
+</Breadcrumb>
                 <Rightupbody />
                 <Rightdnbody />
             </div>
             </div>
+            <Footer />
         </div>
     );
 }

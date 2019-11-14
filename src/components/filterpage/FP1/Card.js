@@ -36,7 +36,7 @@ export default function Card(){
                                     <p className='col' style={{marginBottom:'0px'}}><i className="fa fa-envelope"></i>Email Us</p>
                                 </div>
                                 <div className='row' style={{textAlign:'center',fontWeight:'bolder'}}>
-                                    <button type="button" className="col btn">View Profile</button>
+                                    <button type="button" className="col btn"><a href="/pp1">View Profile</a></button>
                                     <button type="button" className='col btn'>Hire</button>
                                 </div>
                                 <div></div>

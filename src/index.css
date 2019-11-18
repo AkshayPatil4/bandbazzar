@@ -1,9 +1,10 @@
 body {
-  margin:  0px 0px 0px;
+  
   letter-spacing: 2px;
   font-family: 'Abel', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
 }
 
 code {

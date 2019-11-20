@@ -10,6 +10,7 @@ import Main from './components/Event/main';
 import Sartist from './components/Login/Sartist';
 import NavHome from './components/homepage/NavHome';
 import Gmain from './components/Gig/gmain';
+import Epmain from './components/Eventprofile/epmain';
 class App extends Component {
   componentDidMount() {
     // Jquery here $(...)...
@@ -32,6 +33,7 @@ class App extends Component {
           <Route path='/Sartist' component={Sartist} />  
           <Route path='/Main' component={Main} />  
           <Route path='/gmain' component={Gmain}/>
+          <Route path='/epmain' component={Epmain}/>
       </div>
       </Router>
     );

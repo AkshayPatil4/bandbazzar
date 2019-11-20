@@ -8,6 +8,7 @@ import{  Container,
     FormControl,
     Button,
     CardDeck,
+    
 Nav,} from 'react-bootstrap';
 import style from './rightdn.css';
 
@@ -38,7 +39,7 @@ import style from './rightdn.css';
   <option value=""
             hidden
     >All Genres</option>
-    <option value="3">All Ge</option>
+    <option value="3">All Genres</option>
     <option value="1">Alternatives</option>
     <option value="2">Blues</option>
     <option value="3">Christian</option>
@@ -59,7 +60,8 @@ import style from './rightdn.css';
            
           </Nav>
         </Card.Header>
-        <Nav.Link>
+        <Nav.Link href="/epmain">
+        
        <Card className="cards">
        <div className="row">
        <div className="col">
@@ -86,6 +88,7 @@ Near Hi-tech City, PO Bag 1101, Hyderabad, India
   </div>
   </div>
   </Card>
+ 
   </Nav.Link>
 
   <Nav.Link>

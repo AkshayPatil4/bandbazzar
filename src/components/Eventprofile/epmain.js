@@ -4,9 +4,10 @@ import '../homepage/Home.css';
 import style from './epmain.css';
 import NavHome from '../homepage/NavHome';
 import {
-    Breadcrumb, CardDeck, Card,Img,Col,Row, Container,p
+    Breadcrumb, CardDeck, Card,Img,Col,Row, Container,p,Accordion,Button,
 } from 'react-bootstrap';
-
+import Map from './maps';
+import maps from './maps';
 
 const filterStyle = {
     margin: '0',
@@ -29,7 +30,8 @@ function epmain() {
         
         <div className="FilterPage1">
            <div className="navigation"><NavHome /></div>
-           <div className="row"><Breadcrumb>
+           <div className="row">
+             <Breadcrumb>
                      <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
                         <Breadcrumb.Item href="/main">
                             Event
@@ -102,6 +104,46 @@ Since the release of his EP cold/mess in 2018, Prateek has extensively toured in
                  </p>
 
                
+                </Col>
+              </Row>
+              <Row>
+                <Col md={{ span:9 }}>
+               <maps />
+                </Col>
+              </Row>
+              <Row>
+                <Col md={{ span:9 }} >
+                <Accordion defaultActiveKey="0">
+  <Card>
+    <Card.Header>
+      <Accordion.Toggle as={Button} variant="link" eventKey="0">
+      Terms & Conditions
+      </Accordion.Toggle>
+    </Card.Header>
+    <Accordion.Collapse eventKey="0">
+      <Card.Body>Entry for individuals above 12+ years of age only
+Parking available at The Garden of 5 Senses on first come, first served basis.
+A government issued, valid photo ID may be requested at entry.
+No refunds on purchased ticket are possible, even in case of any rescheduling.
+This is a single entry show. Once you exit the show area, you will not be permitted to enter again.
+Please keep your ticket with you at all times.
+Rights of admission reserved, even to valid ticket holders.
+Beware of counterfeit tickets.
+AUDIO OR VIDEO RECORDING OF THE SHOW IS NOT PERMITTED. You must not make, create, store, record or transmit any kind of sound recording, visual footage (recording), or store, record or transmit any information or other data with relation to the event. The organizers reserve the right to eject you from the venue for doing so.
+No professional, SLR or DSLR cameras or recording (sound or video) equipment will be permitted in the venue. Do not bring them to the venue as we will NOT be able to take responsibility and hold the same in safekeeping.
+Security procedures, including frisking remain the right of the management.
+No dangerous or potentially hazardous objects including but not limited to weapons, knives, guns, fireworks, helmets, laser devices, bottles, musical instruments will be allowed in the venue and may be ejected with or without the owner from the venue.
+The sponsors/performers/organizers are not responsible for any injury or damage occurring due to the event. Any claims regarding the same would be settled in courts in Mumbai.
+No drug use allowed - consumption of narcotics is illegal and those found in possession of or consuming narcotics at the event will be handed over to police authorities.
+Ticket holders in an inebriated state may not be allowed entry.
+Carrying of liquids, alcohol, cigarettes and banned substances including outside food will not be permitted in the venue.
+No liability claims of food, pollution and other consumption poisoning will be entertained.
+No tickets for the event shall be used by any person for advertising, promotional or commercial purposes, including but not limited to prizes, competition, contests or sweepstakes without obtaining written consent of the promoter.
+</Card.Body>
+    </Accordion.Collapse>
+  </Card>
+ 
+</Accordion>
                 </Col>
               </Row>
             </Container>

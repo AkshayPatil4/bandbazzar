@@ -46,14 +46,14 @@ export default function NavHome() {
                             </Nav.Link>
                         </Nav.Item>
 
+                        
                         <Nav.Item>
-                        <NavDropdown title="Artist" id="basic-nav-dropdown">
-        <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-        <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-        <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-        <NavDropdown.Divider />
-        <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-      </NavDropdown>
+                        <Nav.Link>
+                                <Link to="/artistmain"><b>Artist</b></Link>
+                            </Nav.Link>
+                        </Nav.Item>
+
+                        <Nav.Item>
                     
                         </Nav.Item>
 
@@ -63,15 +63,11 @@ export default function NavHome() {
                             </Nav.Link>
                         </Nav.Item>
 
-                <Nav.Item>
-                <NavDropdown title="Studio" id="basic-nav-dropdown">
-        <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-        <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-        <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-        <NavDropdown.Divider />
-        <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-      </NavDropdown>
-                </Nav.Item>
+                        <Nav.Item>
+                            <Nav.Link>
+                            <Link to="/studiofiltermain"><b>Studio</b></Link>
+                            </Nav.Link>
+                        </Nav.Item>
                 <Nav.Item>
                 <NavDropdown title="Shop" id="basic-nav-dropdown">
         <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>

@@ -11,6 +11,8 @@ import Sartist from './components/Login/Sartist';
 import NavHome from './components/homepage/NavHome';
 import Gmain from './components/Gig/gmain';
 import Epmain from './components/Eventprofile/epmain';
+import Studiofiltermain from './components/studiofilter/studiofiltermain';
+import Artistmain from './components/Artist/artistmain';
 class App extends Component {
   componentDidMount() {
     // Jquery here $(...)...
@@ -26,6 +28,7 @@ class App extends Component {
             </React.Fragment>
           )} />
           <Route path="/pp1" component={PP1} />
+          <Route path="/artistmain" component={Artistmain}/>
           <Route path="/Home" component={Home} />
           <Route path="/fp1" component={FP1} />
           <Route path='/login' component={Login} />
@@ -34,6 +37,7 @@ class App extends Component {
           <Route path='/Main' component={Main} />  
           <Route path='/gmain' component={Gmain}/>
           <Route path='/epmain' component={Epmain}/>
+          <Route path='/studiofiltermain' component={Studiofiltermain}/>
       </div>
       </Router>
     );

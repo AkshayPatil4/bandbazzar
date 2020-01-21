@@ -2,7 +2,7 @@ import React from 'react';
 import Footer from '../homepage/Footer';
 import '../homepage/Home.css';
 import style from './epmain.css';
-import NavHome from '../homepage/NavHome';
+import NavHome from '../../components/NavHome';
 import {
     Breadcrumb, CardDeck, Card,Img,Col,Row, Container,p,Accordion,Button,
 } from 'react-bootstrap';
@@ -29,7 +29,7 @@ function epmain() {
     return(
         
         <div className="FilterPage1">
-           <div className="navigation"><NavHome /></div>
+           
            <div className="row">
              <Breadcrumb>
                      <Breadcrumb.Item href="/">Home</Breadcrumb.Item>

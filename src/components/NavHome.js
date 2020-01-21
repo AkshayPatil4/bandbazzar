@@ -4,7 +4,7 @@ import { Nav, Navbar, NavDropdown } from "react-bootstrap";
 import styled from "styled-components";
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import Dropdown from 'react-bootstrap/Dropdown';
-import style from './drop.css';
+import style from '../components/homepage/drop.css';
 
 const Styles = styled.div`
   a,
@@ -23,32 +23,32 @@ const Styles = styled.div`
 export default function NavHome() {
     return (
         
-          
-<div className="container-fluid navh ">
+          <div>
+<div className="container navh ">
 
             <Navbar collapseOnSelect expand="lg" >
   <Navbar.Brand href="#home">  
-                <img src={require('../../assets/icons/png.png')} alt="logo"
-                style={{height: '60px', width: '60px'}} />
+                <img src={require('../assets/icons/png.png')} alt="logo"
+                style={{height: '80px', width: '80px'}} />
             </Navbar.Brand>
   <Navbar.Toggle aria-controls="responsive-navbar-nav" />
   <Navbar.Collapse id="responsive-navbar-nav">
     <Nav className="mr-auto" >
     <Nav.Item>
-                            <Nav.Link>
-                                <Link to="/Home"><b>Home</b></Link>
+                            <Nav.Link className="nav">
+                                <Link to="/Home" active><b>Home</b></Link>
                             </Nav.Link>
                         </Nav.Item>
 
                         <Nav.Item>
-                        <Nav.Link>
+                        <Nav.Link className="nav">
                                 <Link to="/FP1"><b>Band</b></Link>
                             </Nav.Link>
                         </Nav.Item>
 
                         
                         <Nav.Item>
-                        <Nav.Link>
+                        <Nav.Link className="nav">
                                 <Link to="/artistmain"><b>Artist</b></Link>
                             </Nav.Link>
                         </Nav.Item>
@@ -58,13 +58,13 @@ export default function NavHome() {
                         </Nav.Item>
 
                         <Nav.Item>
-                            <Nav.Link>
+                            <Nav.Link className="nav">
                             <Link to="/gmain"><b>Gigs</b></Link>
                             </Nav.Link>
                         </Nav.Item>
 
                         <Nav.Item>
-                            <Nav.Link>
+                            <Nav.Link className="nav">
                             <Link to="/studiofiltermain"><b>Studio</b></Link>
                             </Nav.Link>
                         </Nav.Item>
@@ -79,14 +79,14 @@ export default function NavHome() {
                  
                 </Nav.Item>
                 <Nav.Item>
-                    <Nav.Link>
+                    <Nav.Link className="nav"> 
                     <Link to="/main"><b>Post Event</b></Link>
                     </Nav.Link>
                 </Nav.Item>
     </Nav>
     <Nav className="ml-auto" >
     <Nav.Item>
-                    <Nav.Link>
+                    <Nav.Link className="nav">
                     <Link to="/login"><b>Login/Signp</b></Link>
                     </Nav.Link>
                 </Nav.Item>
@@ -98,7 +98,10 @@ export default function NavHome() {
     </Nav>
   </Navbar.Collapse>
 </Navbar>
+
 </div>    
+<hr/>
+</div>
                         
     );
 }

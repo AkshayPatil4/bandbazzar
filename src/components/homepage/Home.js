@@ -1,5 +1,5 @@
 import React from 'react';
-import NavHome from './NavHome';
+
 import Intro from './Intro';
 import Marquee from './Marquee';
 import Upcoming from './Upcoming';
@@ -15,10 +15,9 @@ import style from './Home.css';
 function Home() {
     return(
         <div className="Home">
-           <div className="navigation">
-                            <NavHome /></div>
+           
 
-            <hr />
+           
             <Intro />
             <hr />
             <Trst />

@@ -16,12 +16,23 @@
     padding-top: 1%;
     background-color: white!important;
 }
-.Navbar{
-    margin-top: 0%;
-}
-.nav-item{
+
+nav.item{
     padding: 1.5%;
+    size: 20px;
 }
+
+.nav{
+    width:auto;
+}
+
+.nav:hover{
+color: grey;
+background-color: black;
+border-radius: 25px;
+}
+
+
 .search{
     border-radius: 50%;
     background-color: black;

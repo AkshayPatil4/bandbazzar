@@ -5,7 +5,7 @@ import Rightdnbody from './rightdnbody';
 import Footer from '../homepage/Footer';
 import '../homepage/Home.css';
 import Filter from './Filter';
-import NavHome from '../homepage/NavHome';
+import NavHome from '../NavHome';
 import {
     Breadcrumb
 } from 'react-bootstrap';
@@ -28,7 +28,7 @@ function gigs() {
     return(
         
         <div className="FilterPage1">
-           <div className="navigation"><NavHome /></div>
+           
            
             <div className="row" style={{margin: '0',padding: '0'}}>
             <div className="col-md-3" style={filterStyle}>

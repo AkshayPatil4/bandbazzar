@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
-
+import NavHome from './components/NavHome';
 import Home from './components/homepage/Home';
 import PP1 from './components/profilepage/PP1/PP1';
 import FP1 from './components/filterpage/FP1/FP1';
@@ -8,7 +8,7 @@ import Login from './components/Login/login';
 import Fan from './components/Login/fan';
 import Main from './components/Event/main';
 import Sartist from './components/Login/Sartist';
-import NavHome from './components/homepage/NavHome';
+
 import Gmain from './components/Gig/gmain';
 import Epmain from './components/Eventprofile/epmain';
 import Studiofiltermain from './components/studiofilter/studiofiltermain';
@@ -22,8 +22,10 @@ class App extends Component {
      
       <Router>
         <div className="App">
+          <NavHome/>  
           <Route exact path="/" render={props => (
             <React.Fragment>
+              
               <Home />
             </React.Fragment>
           )} />

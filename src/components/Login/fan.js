@@ -1,64 +1,110 @@
 import React from 'react';
-import style from './fann.css';
-import { Link } from "react-router-dom";
+import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
+import axios from "axios";
+import Recaptcha from 'react-recaptcha';
+import {Redirect} from "react-router-dom"
+// for signup
+class signupfan extends React.Component {
+ 
+  constructor(props) {
+    super(props)
 
-export default function fan() {
-    return (
-        <div>
-        <div className="w3ls-headding">
-          <h1><span>s</span>ign <span>U</span>p as <span>f</span>an</h1>
-        </div>
-        <div className="agile-main">
-          <div className="agile-right">
-            {/*728x90*/}
-            <form action="#" method="post">
-              <div className="agile-right-h2">
-                <h2> register here</h2>
-              </div>
+    
+    this.verifyCallback = this.verifyCallback.bind(this);
+    this.recaptchaLoaded = this.recaptchaLoaded.bind(this);
 
-              <div className="w3l-name">
-                <span><i className="fa fa-user" aria-hidden="true" /></span>
-                <input type="text" name="Username" placeholder="Username" required />
-              </div>
-              <div className="clear" />
-              <div className="w3l-email">
-                {/*728x90*/}
-                <span><i className="fa fa-envelope" aria-hidden="true" /></span>
-                <input type="email" name="email" placeholder="Email" required />
-              </div>
-              <div className="clear" />
-              <div className="w3l-psw">
-                <span><i className="fa fa-lock" aria-hidden="true" /></span>
-                <input type="password" name="Password" placeholder="password" required />
-              </div>
-              <div className="clear" />
-              <div className="w3l-cpsw">
-                <span><i className="fa fa-lock" aria-hidden="true" /></span>
-                <input type="password" name="Password" placeholder="confirm-Password" required />
-              </div>
-              <div className="w3l-agree">
-                <input type="checkbox" className="checkbox" />
-                <p>i agree terms and conditions</p> 
-              </div>
-              <div className="clear" />
-              <div className="w3l-submit">
-                <input type="submit" defaultValue="register now" />
-              </div>
-            </form>
-            <p className="wthree-p">  or connect with</p>
-            <div className="wthree-social">
-              {/*728x90*/}
-              <a href="#"><i className="fa fa-facebook" aria-hidden="true" /> sign in with facebook </a>	
-            </div>
-            <div style={{textAlign:'center',fontSize:'10px',color:'white',padding:'5px'}}>
-            <p>Already have an account? <Link to="/login">Login.</Link>
-            <br/>
-            Or Not a Fan? Sign up as <Link to="/Sartist">Artist/Band</Link>
-            </p> 
-            </div>
-          </div>
-          <div className="clear" />
-        </div>
-        </div>
-    );
-}
+    this.state = {
+      captchaVerified: false,
+      firstname: '',
+      lastname: '',
+      email: '',
+      password: '',
+     
+    }
+  }
+
+  
+
+  onChange = e => {
+    this.setState({ [e.target.name]: e.target.value })
+  }
+  verifyCallback(response) {
+    if (response) {
+    
+      this.setState({
+        captchaVerified: true
+        
+      })
+      console.log(this.state.captchaVerified)
+    }
+  }
+  recaptchaLoaded() {
+    console.log('capcha successfully loaded');
+  }
+  submitFormAdd = e => {
+    console.log(this.state.captchaVerified)
+    e.preventDefault()
+
+    const userData = {
+      firstname: this.state.firstname,
+      lastname: this.state.lastname,
+      email: this.state.email,
+      password: this.state.password,
+  
+    }
+
+    if(this.state.captchaVerified){
+    axios.post('/main/register/signup', userData)
+    .then( response => {
+      if(response.data.status)
+      {
+        window.alert("you are signup sucessfully ")
+        // console.log('The solution is: ', response.data.result);
+         window.location.href = "/login"; 
+        
+      }
+      if(response.data.existinfo)
+      {
+        window.alert("user account already exist");
+        window.location.href = "/login"; 
+      }
+    })
+    .catch(err => console.log(err));
+  }
+  else{
+    
+    window.alert("verify your captcha")
+  }
+  }
+
+    render() {
+      return (
+       <div>
+         <p>create your account</p>
+        <Form onSubmit={this.submitFormAdd}>
+          <FormGroup>
+            <Label for="firstname">First Name</Label>
+            <Input type="text" name="firstname" id="firstname" onChange={this.onChange} value={this.state.firstname === null ? '' : this.state.firstname}  required/>
+          </FormGroup>
+          <FormGroup>
+            <Label for="lastname">Last Name</Label>
+            <Input type="text" name="lastname" id="lastname" onChange={this.onChange} value={this.state.lastname === null ? '' : this.state.lastname} required />
+          </FormGroup>
+          <FormGroup>
+            <Label for="email">Email</Label>
+            <Input type="email" name="email" id="email" onChange={this.onChange} value={this.state.email === null ? '' : this.state.email} required />
+          </FormGroup>
+          <FormGroup>
+            <Label for="password">password</Label>
+            <Input type="password" name="password" id="password" onChange={this.onChange} value={this.state.password === null ? '' : this.state.password} placeholder="" required />
+          </FormGroup>
+          <Recaptcha sitekey="6LeXDNcUAAAAAP8bwsYprEUeLhXEmxdAPZEW0rLF" render="explicit" onloadCallback={this.recaptchaLoaded} verifyCallback={this.verifyCallback}/>
+          <Button type="submit"  onClick={this.handleSubscribe} >Submit</Button>
+        
+        </Form>
+       </div>
+      );
+    }
+  }
+
+  export default signupfan

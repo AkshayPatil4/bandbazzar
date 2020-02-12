@@ -7,8 +7,8 @@ import FP1 from './components/filterpage/FP1/FP1';
 import Login from './components/Login/login';
 import Fan from './components/Login/fan';
 import Main from './components/Event/main';
-import Sartist from './components/Login/Sartist';
-
+import forgetpassword from './components/Login/forgetpassword';
+import resetpassword from './components/Login/resetpassword';
 import Gmain from './components/Gig/gmain';
 import Epmain from './components/Eventprofile/epmain';
 import Studiofiltermain from './components/studiofilter/studiofiltermain';
@@ -35,11 +35,12 @@ class App extends Component {
           <Route path="/fp1" component={FP1} />
           <Route path='/login' component={Login} />
           <Route path='/Fan' component={Fan} />
-          <Route path='/Sartist' component={Sartist} />  
+          <Route path='/forgetpassword' component={forgetpassword} />  
           <Route path='/Main' component={Main} />  
           <Route path='/gmain' component={Gmain}/>
           <Route path='/epmain' component={Epmain}/>
           <Route path='/studiofiltermain' component={Studiofiltermain}/>
+          <Route path='/resetpassword' component={resetpassword} />  
       </div>
       </Router>
     );

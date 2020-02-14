@@ -22,8 +22,10 @@ class login extends React.Component {
         .then(response=>{
             if(response.data.status)
             {
+                //we store emailid just to avoid the match in token error
                 localStorage.setItem("usertoken",response.data.token)
                 localStorage.setItem("email",response.data.emailid)
+                localStorage.setItem("name",response.data.message)
               window.alert( "welcome"+" "+response.data.message +"  you are login successfully")
               window.location.href = "/"; 
               

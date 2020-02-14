@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Nav, Navbar, NavDropdown } from "react-bootstrap";
 import styled from "styled-components";
@@ -21,6 +22,20 @@ const Styles = styled.div`
 `
  
 export default function NavHome() {
+    // this.state={
+    //     loginstatus:false
+    // }
+    
+    const [state, setState] = useState({loginstatus:localStorage.getItem("usertoken"),name:localStorage.getItem("name")});
+  
+    // setState({ loginstatus:localStorage.getItem("usertoken") });
+    function clickfunction(){
+        localStorage.removeItem("usertoken");
+        localStorage.removeItem("email");
+        localStorage.removeItem("name")
+        localStorage.removeItem("recoveryemail")
+        window.location.href = "/";
+    }
     return (
         
           <div>
@@ -87,13 +102,9 @@ export default function NavHome() {
     <Nav className="ml-auto" >
     <Nav.Item>
                     <Nav.Link className="nav">
-                    <Link to="/login"><b>Login/Signp</b></Link>
+             {state.loginstatus!=null? <div> <Link to="/"><b>{state.name}</b></Link>  <Link to="/" onClick={clickfunction}><b>|| logout</b></Link></div>:<Nav.Item> <Link to="/login"><b>Login/Signp</b></Link></Nav.Item>}
                     </Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                <div className="search">
-                   <p><i className="fas fa-search" aria-hidden="true"></i> </p>
-                </div>
+                
                 </Nav.Item>
     </Nav>
   </Navbar.Collapse>
